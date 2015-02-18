@@ -1,0 +1,27 @@
+HKCR
+{
+	msgdll.nagevlogmsg.1 = s 'nagevlogmsg Class'
+	{
+		CLSID = s '{FAA3D89D-43ED-47FC-9D24-30D437C6C0AC}'
+	}
+	msgdll.nagevlogmsg = s 'nagevlogmsg Class'
+	{
+		CLSID = s '{FAA3D89D-43ED-47FC-9D24-30D437C6C0AC}'
+		CurVer = s 'msgdll.nagevlogmsg.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {FAA3D89D-43ED-47FC-9D24-30D437C6C0AC} = s 'nagevlogmsg Class'
+		{
+			ProgID = s 'msgdll.nagevlogmsg.1'
+			VersionIndependentProgID = s 'msgdll.nagevlogmsg'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{3C16E81B-A52C-44BB-96B4-17EACF11A9CC}'
+		}
+	}
+}

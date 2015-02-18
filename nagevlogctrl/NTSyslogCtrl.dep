@@ -1,0 +1,22 @@
+# Microsoft Developer Studio Generated Dependency File, included by NTSyslogCtrl.mak
+
+.\NTSyslogCtrl.cpp : \
+	".\NTSyslogCtrl.h"\
+	".\NTSyslogCtrlDlg.h"\
+	".\StdAfx.h"\
+	
+
+.\NTSyslogCtrl.rc : \
+	".\res\NTSyslogCtrl.ico"\
+	".\res\NTSyslogCtrl.rc2"\
+	
+
+.\NTSyslogCtrlDlg.cpp : \
+	".\NTSyslogCtrl.h"\
+	".\NTSyslogCtrlDlg.h"\
+	".\StdAfx.h"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	

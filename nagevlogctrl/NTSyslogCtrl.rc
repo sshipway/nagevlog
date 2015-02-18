@@ -1,0 +1,426 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 153
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Nagios EventLog Service Control Manager"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,9,6,20,20
+    LTEXT           "Nagios EventLog Service Control Manager",IDC_STATUS,35,7,179,8,SS_NOPREFIX
+    DEFPUSHBUTTON   "OK",IDOK,78,125,80,21,WS_GROUP
+    LTEXT           "Nagios EventLog Service forwards NT/2000/XP Eventlogs to an NSCA daemon.\n\nNagios EventLog Service Control Manager based on NTSyslog Control Manager by Didier LIROULET and subsequent updates by Michael Glaubig",IDC_STATIC,16,27,199,49
+    LTEXT           "Modified for NSCA by Steve Shipway.\n* Added event filters to select various events\n* Changed to send NSCA alerts rather than syslog\nIncorporates send_nsca code by Ethan Galstead.\nSee http://www.steveshipway.org/software for support.",IDC_STATIC,17,79,202,42
+END
+
+IDD_NTSYSLOGCTRL_DIALOG DIALOGEX 0, 0, 320, 247
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Nagios EventLog Service Control Manager"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Service status on Computer <>...",IDC_COMPUTER,7,5,306,68
+    ICON            IDI_GREEN_ICON,IDC_STATUS_LIGHT,17,25,20,20
+    CTEXT           "Service is running.",IDC_STATUS,45,28,261,16,SS_CENTERIMAGE
+    PUSHBUTTON      "&Select Computer",IDC_SELECT_COMPUTER,17,55,80,14
+    PUSHBUTTON      "S&tart Service",IDC_START,120,55,80,14
+    PUSHBUTTON      "St&op Service",IDC_STOP,224,55,80,14
+    GROUPBOX        "Configuration...",IDC_STATIC,7,77,306,71
+    PUSHBUTTON      "NSCA &Daemons",IDC_SYSLOGD,15,91,80,14
+    LTEXT           "Select Nagios NSCA Daemon servers for forwarded events.",IDC_STATIC,105,91,200,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_DELAY,15,110,44,12,ES_NUMBER,WS_EX_RIGHT
+    LTEXT           "Number of seconds between EventLog processing cycles.  You need to restart the daemon for this to take effect.  Suggested value: 30",IDC_STATIC,67,110,238,17
+    LTEXT           "Heartbeat Nagios svc name:",IDC_STATIC,16,131,100,13
+    EDITTEXT        IDC_HBSVC,120,130,81,12,ES_AUTOHSCROLL
+    LTEXT           "Signal every",IDC_STATIC,206,132,40,10
+    EDITTEXT        IDC_HBFREQ,249,130,31,12,ES_AUTOHSCROLL
+    LTEXT           "cycles",IDC_STATIC,284,132,21,12
+    GROUPBOX        "Filters",IDC_STATIC,7,151,306,70
+    LTEXT           "Use the drop down menu below to select which Filter to edit.",IDC_STATIC,14,164,206,10,SS_CENTERIMAGE
+    COMBOBOX        IDC_EVENTLOG_SELECT,16,180,165,58,CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | CBS_OEMCONVERT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Move up",IDC_MOVEUP,186,178,56,15
+    PUSHBUTTON      "Move down",IDC_MOVEDOWN,248,178,56,15
+    PUSHBUTTON      "Create &New",IDC_CREATE,15,199,52,15
+    PUSHBUTTON      "&Edit",IDC_EVENTLOG,72,199,52,15
+    PUSHBUTTON      "Delete",IDC_DELETE,129,199,52,15
+    PUSHBUTTON      "Export",IDC_EXPORT,187,199,55,15
+    PUSHBUTTON      "Clear All",IDC_CLEARALL,248,199,56,15
+    DEFPUSHBUTTON   "&Close",IDCANCEL,20,226,80,15
+    PUSHBUTTON      "Generate Test Event",IDC_GENEVENT,119,226,80,15
+    PUSHBUTTON      "&About",IDC_ABOUTBOX,219,226,79,15
+END
+
+IDD_SYSLOGD_DIALOG DIALOG  0, 0, 320, 197
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "NSCA Server Settings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,22,171,80,20
+    EDITTEXT        IDC_PRIMARY_SYSLOGD,97,20,139,14,ES_AUTOHSCROLL | ES_WANTRETURN
+    EDITTEXT        IDC_BACKUP_SYSLOGD,97,52,137,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Cancel",IDCANCEL,215,171,80,20
+    GROUPBOX        "Enter NSCA Daemons Addresses to forward events...",IDC_STATIC,7,7,306,127
+    LTEXT           "Primary NSCA Daemon :",IDC_STATIC,13,20,82,14,SS_CENTERIMAGE
+    LTEXT           "Backup NSCA Daemon :",IDC_STATIC,13,51,82,14,SS_CENTERIMAGE
+    LTEXT           "Required",IDC_STATIC,97,36,69,8
+    LTEXT           "Leave blank field if you don't have a backup NSCA server.",IDC_STATIC,97,68,180,16
+    LTEXT           "Port:",IDC_STATIC,242,25,22,10
+    LTEXT           "Port:",IDC_STATIC,242,54,22,10
+    EDITTEXT        IDC_NSCA_PORT,269,21,37,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NSCA_PORT1,269,52,37,14,ES_AUTOHSCROLL
+    LTEXT           "Host Name in Nagios:",IDC_STATIC,13,92,73,12
+    EDITTEXT        IDC_HOSTNAME,97,90,137,14,ES_AUTOHSCROLL
+    LTEXT           "NSCA Password:",IDC_STATIC,13,115,75,11
+    COMBOBOX        IDC_ENCRYPTION,241,113,63,104,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_PASSWORD,97,113,74,13,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Encryption:",IDC_STATIC,186,114,49,10
+    GROUPBOX        "Logging of actions",IDC_STATIC,7,138,306,29
+    CONTROL         "Log NSCA alerts to EventLog",IDC_NSCALOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,150,123,11
+    CONTROL         "Log all actions (Debug mode)",IDC_DEBUG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,170,151,112,11
+    PUSHBUTTON      "Test NSCA daemon",IDC_TEST,120,171,80,20
+END
+
+IDD_SERVER_DIALOG DIALOG  0, 0, 320, 148
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Nagios EventLog Service Control Manager"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,172,123,80,20
+    PUSHBUTTON      "&Cancel",IDCANCEL,68,123,80,20
+    GROUPBOX        "Select a server hosting Nagios EventLog to manage...",IDC_STATIC,7,7,306,112
+    LTEXT           "To connect to the server:\n\n1) Nagios EventLog must be installed on the server.\n2) Network registry access must be enabled on the server.\n3) You must have Administrator privileges on the server.",IDC_STATIC,21,25,269,43
+    EDITTEXT        IDC_COMPUTER,21,96,210,14,ES_AUTOHSCROLL | ES_WANTRETURN
+    PUSHBUTTON      "&Browse",IDC_SELECT_COMPUTER,238,96,60,14
+    LTEXT           "Just type in the name of the server or click ""Browse"" button to browse the network and select a server.",IDC_STATIC,21,72,269,19
+END
+
+IDD_CONFIG_LOG DIALOGEX 0, 0, 320, 241
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Filter Settings"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Select Log events to forward",IDC_LABEL,7,0,305,210
+    DEFPUSHBUTTON   "&OK",IDOK,63,214,80,20
+    PUSHBUTTON      "&Cancel",IDCANCEL,183,214,80,20
+    LTEXT           "Filter Description:",IDC_STATIC,20,15,90,10
+    EDITTEXT        IDC_FILTERDESC,145,15,145,12,ES_AUTOHSCROLL
+    LTEXT           "Event Log to check:",IDC_STATIC,20,30,100,10
+    COMBOBOX        IDC_EVENTLOG,145,30,148,58,CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | CBS_OEMCONVERT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Match Rules",IDC_STATIC,20,45,279,107
+    GROUPBOX        "NSCA Alert Message",IDC_STATIC,20,153,281,50
+    LTEXT           "Which Events to alert:",IDC_STATIC,36,58,81,12
+    CONTROL         "Information",IDC_INFORMATION_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,58,58,10
+    CONTROL         "Audit Success",IDC_AUDIT_SUCCESS_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,221,58,64,10
+    CONTROL         "Warning",IDC_WARNING_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,71,60,10
+    CONTROL         "Audit Failure",IDC_AUDIT_FAILURE_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,220,71,67,10
+    CONTROL         "Error",IDC_ERROR_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,82,61,10
+    LTEXT           "Event IDs (comma list):",IDC_STATIC,35,95,73,10
+    CONTROL         "Not",IDC_NOTEVENT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,113,95,27,11
+    EDITTEXT        IDC_EVENTID,142,95,148,12,ES_AUTOHSCROLL
+    LTEXT           "Match String (regexp):",IDC_STATIC,36,112,74,9
+    CONTROL         "Not",IDC_NOTMATCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,113,111,27,11
+    EDITTEXT        IDC_MATCHSTRING,142,111,147,12,ES_AUTOHSCROLL
+    LTEXT           "Event Source (string):",IDC_STATIC,36,130,75,10
+    CONTROL         "Not",IDC_NOTSOURCE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,113,128,27,11
+    EDITTEXT        IDC_SOURCE,142,128,147,13,ES_AUTOHSCROLL
+    LTEXT           "Service Name:",IDC_STATIC,36,168,53,8
+    EDITTEXT        IDC_SERVICE_NAME,142,166,145,13,ES_AUTOHSCROLL
+    LTEXT           "Service Status:",IDC_STATIC,36,184,53,10
+    COMBOBOX        IDC_STATUS,142,183,87,79,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_FGENEVENT_DIALOG DIALOG  0, 0, 261, 127
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Status"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Generate Event",IDOK,54,105,76,14
+    PUSHBUTTON      "Cancel",IDCANCEL,144,105,75,14
+    GROUPBOX        "Event Parameters",IDC_STATIC,7,7,247,93
+    LTEXT           "Event ID",IDC_STATIC,16,20,34,10
+    LTEXT           "Event Source",IDC_STATIC,135,22,49,10
+    LTEXT           "Event Text",IDC_STATIC,15,38,52,11
+    EDITTEXT        IDC_EVENTID,71,19,56,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SOURCE,190,18,56,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TEXT,71,36,176,12,ES_AUTOHSCROLL
+    GROUPBOX        "Status",IDC_STATIC,13,54,233,38,WS_GROUP
+    CONTROL         "Information",IDC_STAT_INFO,"Button",BS_AUTORADIOBUTTON,17,66,58,9
+    CONTROL         "Warning",IDC_STAT_WARNING,"Button",BS_AUTORADIOBUTTON,17,78,46,9
+    CONTROL         "Error",IDC_STAT_ERROR,"Button",BS_AUTORADIOBUTTON,93,65,34,12
+    CONTROL         "Audit Success",IDC_STAT_AUDIT_SUCCESS,"Button",BS_AUTORADIOBUTTON,158,66,63,11
+    CONTROL         "Audit Failure",IDC_STAT_AUDIT_FAIL,"Button",BS_AUTORADIOBUTTON,158,78,57,11
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,9,2,1
+ PRODUCTVERSION 1,9,2,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Based on NTSyslogCtrl and send_nsca"
+            VALUE "CompanyName", "Auckland University"
+            VALUE "FileDescription", "NagEvLogCtrl"
+            VALUE "FileVersion", "1, 9, 2, 1"
+            VALUE "InternalName", "NagEvLogCtrl"
+            VALUE "LegalCopyright", "Copyright © 2004-2009 Steve Shipway and others"
+            VALUE "LegalTrademarks", "Released under GNU GPL"
+            VALUE "OriginalFilename", "NagEvLogCtrl.exe"
+            VALUE "ProductName", "Auckland University NagEvLogCtrl"
+            VALUE "ProductVersion", "1, 9, 2, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_NTSYSLOGCTRL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 241
+    END
+
+    IDD_SYSLOGD_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 191
+    END
+
+    IDD_SERVER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 143
+    END
+
+    IDD_CONFIG_LOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 312
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_FGENEVENT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 254
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_CONFIG_LOG DLGINIT
+BEGIN
+    IDC_EVENTLOG, 0x403, 1, 0
+"\000" 
+    IDC_STATUS, 0x403, 7, 0
+0x3028, 0x2029, 0x4b4f, "\000" 
+    IDC_STATUS, 0x403, 12, 0
+0x3128, 0x2029, 0x6157, 0x6e72, 0x6e69, 0x0067, 
+    IDC_STATUS, 0x403, 13, 0
+0x3228, 0x2029, 0x7243, 0x7469, 0x6369, 0x6c61, "\000" 
+    IDC_STATUS, 0x403, 12, 0
+0x3328, 0x2029, 0x6e55, 0x6e6b, 0x776f, 0x006e, 
+    IDC_STATUS, 0x403, 11, 0
+0x3428, 0x2029, 0x6749, 0x6f6e, 0x6572, "\000" 
+    0
+END
+
+IDD_NTSYSLOGCTRL_DIALOG DLGINIT
+BEGIN
+    IDC_EVENTLOG_SELECT, 0x403, 1, 0
+"\000" 
+    0
+END
+
+IDD_SYSLOGD_DIALOG DLGINIT
+BEGIN
+    IDC_ENCRYPTION, 0x403, 9, 0
+0x3028, 0x2029, 0x6f4e, 0x656e, "\000" 
+    IDC_ENCRYPTION, 0x403, 8, 0
+0x3128, 0x2029, 0x4f58, 0x0052, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\NagEvLogCtrl.ico"
+IDI_GREEN_ICON          ICON                    "res\\GreenLight.ICO"
+IDI_YELLOW_ICON         ICON                    "res\\YellowLight.ICO"
+IDI_RED_ICON            ICON                    "res\\RedLight.ICO"
+IDI_ERROR_ICON          ICON                    "res\\Error.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About Nagios Service Control Manager..."
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Nagios EventLog Control Manager"
+    IDS_CONFIRM_SAVE        "Do you really want to save the %s settings?\n\nNB: if service is started, you must restart it for change to take effect."
+    IDS_CONFIRM_DISCARD     "Do you really want to discard the changes to the %s settings?"
+    IDS_CONFIRM_DELETE      "Do you really want to delete this?\n\nNB: if the service is started, you must restart it for the changes to take effect."
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\NTSyslogCtrl.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // French (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\NTSyslogCtrl.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

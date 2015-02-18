@@ -1,0 +1,28 @@
+23-Aug-2002  1.12  Minor bug fixes and updated GUI tool.
+
+multiple     1.11  Added support for user defined event logs
+
+14-Jul-2002  1.10  Added EventID to syslog message and fixed file handle leak
+
+27-Jun-2002  1.9   Louis Erickson <LErickson@ariba.com> has added support for
+                   adjusting the facility and severity codes for each event type. 
+22-Apr-2002  1.8   Fixed language independence and added support for multiple
+                   message files.
+
+27-Nov-2001  1.7   GUI contribution from liroulet@worldnet.fr: You can start
+                   and stop the service, manage the syslogd destination servers,
+                   the Application, Security and System events to forward.
+
+09-Apr-2001  1.6   Initial SourceForge release
+
+01-Dec-1999  1.5   Removed superfluous gethostbyaddr() call in event.c
+
+30-Nov-1999  1.4   Removed hardcoded data file; added LastRun registry key
+
+15-Oct-1999  1.3   Fixed handling of events w/ missing descriptions
+
+28-Sep-1999  1.2   Added support for secondary syslog host
+
+09-May-1999  1.1   Added additional configuration options 
+
+18-Oct-1998  1.0   Initial release

@@ -1,0 +1,37 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\SaberNet\Syslog\System]
+"Information"=dword:00000001
+"Information Priority"=dword:00000009
+"Warning"=dword:00000001
+"Warning Priority"=dword:00000009
+"Error"=dword:00000001
+"Error Priority"=dword:00000009
+"Audit Success"=dword:00000001
+"Audit Success Priority"=dword:00000009
+"Audit Failure"=dword:00000001
+"Audit Failure Priority"=dword:00000009
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\SaberNet\Syslog\Security]
+"Information"=dword:00000001
+"Information Priority"=dword:00000009
+"Warning"=dword:00000001
+"Warning Priority"=dword:00000009
+"Error"=dword:00000001
+"Error Priority"=dword:00000009
+"Audit Success"=dword:00000001
+"Audit Success Priority"=dword:00000009
+"Audit Failure"=dword:00000001
+"Audit Failure Priority"=dword:00000009
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\SaberNet\Syslog\Application]
+"Information"=dword:00000001
+"Information Priority"=dword:00000009
+"Warning"=dword:00000001
+"Warning Priority"=dword:00000009
+"Error"=dword:00000001
+"Error Priority"=dword:00000009
+"Audit Success"=dword:00000001
+"Audit Success Priority"=dword:00000009
+"Audit Failure"=dword:00000001
+"Audit Failure Priority"=dword:00000009

@@ -1,0 +1,39 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NagEvLogCtrl", "nagevlogCtrl\NagEvLogCtrl.vcproj", "{CD7BF66B-E134-457D-86F2-F1A3CDD5CB7B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nagevlog", "nagevlog\nagevlog.vcproj", "{27C5D2FA-0D6F-4396-B2BB-60BADE83B053}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "msgdll", "msgdll\msgdll.vcproj", "{F27239F8-A68C-4B72-9A8B-9A2938CDF897}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Win NT Release|Win32 = Win NT Release|Win32
+		Description = Eventlog agent
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD7BF66B-E134-457D-86F2-F1A3CDD5CB7B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CD7BF66B-E134-457D-86F2-F1A3CDD5CB7B}.Debug|Win32.Build.0 = Debug|Win32
+		{CD7BF66B-E134-457D-86F2-F1A3CDD5CB7B}.Release|Win32.ActiveCfg = Release|Win32
+		{CD7BF66B-E134-457D-86F2-F1A3CDD5CB7B}.Release|Win32.Build.0 = Release|Win32
+		{CD7BF66B-E134-457D-86F2-F1A3CDD5CB7B}.Win NT Release|Win32.ActiveCfg = Win NT Release|Win32
+		{CD7BF66B-E134-457D-86F2-F1A3CDD5CB7B}.Win NT Release|Win32.Build.0 = Win NT Release|Win32
+		{27C5D2FA-0D6F-4396-B2BB-60BADE83B053}.Debug|Win32.ActiveCfg = Debug|Win32
+		{27C5D2FA-0D6F-4396-B2BB-60BADE83B053}.Debug|Win32.Build.0 = Debug|Win32
+		{27C5D2FA-0D6F-4396-B2BB-60BADE83B053}.Release|Win32.ActiveCfg = Release|Win32
+		{27C5D2FA-0D6F-4396-B2BB-60BADE83B053}.Release|Win32.Build.0 = Release|Win32
+		{27C5D2FA-0D6F-4396-B2BB-60BADE83B053}.Win NT Release|Win32.ActiveCfg = Win NT Release|Win32
+		{27C5D2FA-0D6F-4396-B2BB-60BADE83B053}.Win NT Release|Win32.Build.0 = Win NT Release|Win32
+		{F27239F8-A68C-4B72-9A8B-9A2938CDF897}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F27239F8-A68C-4B72-9A8B-9A2938CDF897}.Debug|Win32.Build.0 = Debug|Win32
+		{F27239F8-A68C-4B72-9A8B-9A2938CDF897}.Release|Win32.ActiveCfg = Release|Win32
+		{F27239F8-A68C-4B72-9A8B-9A2938CDF897}.Release|Win32.Build.0 = Release|Win32
+		{F27239F8-A68C-4B72-9A8B-9A2938CDF897}.Win NT Release|Win32.ActiveCfg = Release|Win32
+		{F27239F8-A68C-4B72-9A8B-9A2938CDF897}.Win NT Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

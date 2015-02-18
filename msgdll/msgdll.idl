@@ -1,0 +1,36 @@
+// msgdll.idl : IDL source for msgdll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (msgdll.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(5AF9B1DB-B469-4A5D-A18E-5928883ACF8F),
+	dual,
+	nonextensible,
+	helpstring("Inagevlogmsg Interface"),
+	pointer_default(unique)
+]
+interface Inagevlogmsg : IDispatch{
+};
+[
+	uuid(3C16E81B-A52C-44BB-96B4-17EACF11A9CC),
+	version(1.0),
+	helpstring("msgdll 1.0 Type Library")
+]
+library msgdllLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(FAA3D89D-43ED-47FC-9D24-30D437C6C0AC),
+		helpstring("nagevlogmsg Class")
+	]
+	coclass nagevlogmsg
+	{
+		[default] interface Inagevlogmsg;
+	};
+};
