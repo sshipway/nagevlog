@@ -6,18 +6,21 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.old
 
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
+NT_Release/
 x64/
 x86/
 build/
 bld/
 [Bb]in/
 [Oo]bj/
+*_release/
 
 # Roslyn cache directories
 *.ide/
